@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Notes | Code with Avinash</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="notes.css" />
+  </head>
+  <body>
+    <!-- Shared header -->
+    <!-- <header>
+      <h1>Code with Avinash</h1>
+      <nav>
+        <a href="../index.html">Home</a> |
+        <a href="../about/index.html">About</a> |
+        <a href="index.html">Notes</a>
+      </nav>
+    </header> -->
+    <header>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/notes">Notes</a>
+      </nav>
+    </header>
+
+    <main class="notes-main">
+      <div class="notes-toggle" onclick="toggleNotes()">Hide / Show Notes</div>
+
+      <ul class="note-list" id="noteList">
+        <li>
+          <a class="note-title" href="performance-people.html"
+            >Performance is a people problem</a
+          >
+          <div class="note-summary">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </div>
+        </li>
+        <li>
+          <a class="note-title" href="designing-frontend.html"
+            >Designing frontend systems</a
+          >
+          <div class="note-summary">
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </li>
+      </ul>
+    </main>
+
+    <script>
+      function toggleNotes() {
+        const list = document.getElementById("noteList");
+        list.style.display = list.style.display === "none" ? "block" : "none";
+      }
+    </script>
+  </body>
+</html>

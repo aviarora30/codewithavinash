@@ -1,0 +1,58 @@
+/* notes.css - note index & single note pages */
+
+.notes-main {
+  max-width: 680px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.6;
+}
+
+.note-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.note-list li {
+  margin-bottom: 24px;
+}
+
+.note-title {
+  font-size: 1.3rem;
+  color: #222;
+  text-decoration: none;
+}
+
+.note-summary {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.notes-toggle {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #007acc;
+}
+
+.note-mute {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.note-divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+.note-content p {
+  margin-bottom: 16px;
+}
+
+.note-takeaway {
+  font-style: italic;
+  color: #333;
+  font-size: 0.95rem;
+}
