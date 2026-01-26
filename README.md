@@ -9,8 +9,13 @@ A personal website showcasing the work and insights of Avinash Arora, an enginee
 ├── CNAME                 # Domain configuration for GitHub Pages
 ├── index.html            # Home page
 ├── styles.css            # Main stylesheet
+├── assets/               # Images and media files
 ├── about/
 │   └── index.html        # About page
+├── notes/
+│   ├── index.html        # Notes listing page
+│   ├── notes.css         # Note-specific styles
+│   └── performance-people.html  # Sample note article
 └── README.md             # Project documentation
 ```
 
@@ -18,6 +23,7 @@ A personal website showcasing the work and insights of Avinash Arora, an enginee
 
 - **Home** (`/`) - Main landing page
 - **About** (`/about`) - Information about Avinash Arora
+- **Notes** (`/notes`) - Articles and insights from experience
 
 ## Styling
 
