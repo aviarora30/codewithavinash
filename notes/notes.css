@@ -10,6 +10,20 @@
   line-height: 1.6;
 }
 
+.note-meta {
+  font-size: 0.85em;
+  color: #777;
+  margin-top: 0.5em;
+}
+
+.note-meta .note-tag {
+  margin-left: 0.6em;
+}
+
+.meta-separator {
+  margin: 0 0.4em;
+}
+
 .note-list {
   list-style: none;
   padding: 0;
