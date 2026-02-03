@@ -2,52 +2,109 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Note Title Here | Code with Avinash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NOTE_TITLE | Code with Avinash</title>
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="notes.css" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
   <body>
-    <!-- Shared header -->
     <header>
-      <h1>Code with Avinash</h1>
       <nav>
-        <a href="../index.html">Home</a> |
-        <a href="../about/index.html">About</a> |
-        <a href="index.html">Notes</a>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/notes">Notes</a>
       </nav>
     </header>
 
     <main class="notes-main">
-      <!-- Note Title -->
-      <h1>Note Title Here</h1>
+      <!-- Note title -->
+      <h1>NOTE_TITLE</h1>
 
-      <!-- Muted Context -->
-      <div class="note-mute">
-        Written as part of personal notes | Date or placeholder context
+      <!-- One-line context / framing -->
+      <div class="note-mute">SHORT_DESCRIPTION_OR_CONTEXT</div>
+
+      <!-- Meta information -->
+      <div class="note-meta">
+        <span class="note-date">DD Mon YYYY</span>
+        <span class="meta-separator">·</span>
+        <span class="note-tag">#tagOne</span>
+        <span class="note-tag">#tagTwo</span>
+        <span class="note-tag">#tagThree</span>
       </div>
 
-      <!-- Divider -->
       <hr class="note-divider" />
 
-      <!-- Main Content -->
+      <!-- Note content -->
       <div class="note-content">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit
-          amet nulla a turpis laoreet facilisis. Morbi vitae dolor ac lorem
-          feugiat fermentum.
-        </p>
-        <p>
-          Aliquam erat volutpat. Quisque congue leo vel arcu facilisis, a
-          sollicitudin dolor tincidunt. Cras auctor magna at justo tincidunt, in
-          feugiat arcu cursus.
-        </p>
-        <p>More placeholder paragraphs…</p>
+        <!-- Section 1 (optional heading) -->
+        <section>
+          <!-- Use <h2> only if needed -->
+          <!-- <h2>Section heading</h2> -->
+
+          <p>
+            Opening paragraph. This can be a story, observation, or framing
+            thought. No pressure to explain everything upfront.
+          </p>
+
+          <p>
+            Add another paragraph if needed. Notes work best when each paragraph
+            carries a single idea.
+          </p>
+        </section>
+
+        <!-- Section 2 -->
+        <section>
+          <h2>Section heading</h2>
+
+          <p>
+            Expand on a specific idea. This is where most of the thinking
+            usually happens.
+          </p>
+
+          <ul>
+            <li>Use lists sparingly</li>
+            <li>Only when structure adds clarity</li>
+            <li>Not just for summarising</li>
+          </ul>
+        </section>
+
+        <!-- Section 3 -->
+        <section>
+          <h2>Another section</h2>
+
+          <p>
+            This could be a counterpoint, trade-off, or uncomfortable truth.
+          </p>
+        </section>
+
+        <!-- Optional closing section -->
+        <section>
+          <h2>Open questions / Closing thoughts</h2>
+
+          <p>
+            Leave things unresolved if needed. Notes don’t need conclusions.
+            Pausing thoughtfully is enough.
+          </p>
+        </section>
       </div>
 
-      <!-- Closing Takeaway -->
+      <!-- Optional closing section -->
       <div class="note-takeaway">
-        Takeaway: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <section>
+          <h2>Takeaways / Advice</h2>
+          <ul>
+            <li>
+              <strong>Takeaway - 1</strong>
+              Takeaway description.
+            </li>
+          </ul>
+        </section>
       </div>
     </main>
+
+    <footer>
+      <p>© Avinash Arora</p>
+    </footer>
   </body>
 </html>
