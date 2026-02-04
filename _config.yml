@@ -1,0 +1,17 @@
+title: Code With Avinash
+description: Personal website of Avinash Arora, engineering leader and frontend architect.
+url: https://codewithavinash.com
+collections:
+  notes:
+    output: true
+    permalink: /notes/:name.html
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      type: notes
+    values:
+      layout: note
+      notes_styles: true

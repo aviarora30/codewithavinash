@@ -1,54 +1,39 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Notes | Code with Avinash</title>
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="notes.css" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/notes">Notes</a>
-      </nav>
-    </header>
+---
+title: Notes | Code with Avinash
+description: Notes by Avinash Arora on engineering leadership and frontend craftsmanship.
+notes_styles: true
+---
+<main class="notes-main">
+  <button class="notes-toggle" type="button" onclick="toggleNotes()">
+    Hide / Show Notes
+  </button>
 
-    <main class="notes-main">
-      <div class="notes-toggle" onclick="toggleNotes()">Hide / Show Notes</div>
-
-      <ul class="note-list" id="noteList">
-        <li>
-          <a class="note-title" href="performance-is-a-people-problem.html"
-            >Performance is a people problem</a
-          >
+  <ul class="note-list" id="noteList">
+    {% assign sorted_notes = site.notes | sort: "date" | reverse %}
+    {% for note in sorted_notes %}
+      <li>
+        <a class="note-title" href="{{ note.url | relative_url }}"
+          >{{ note.title }}</a
+        >
+        {% assign summary_text = note.index_summary | default: note.summary %}
+        {% if summary_text %}
+          <div class="note-summary">{{ summary_text }}</div>
+        {% elsif note.excerpt %}
           <div class="note-summary">
-            How unclear ownership quietly kills team performance.
+            {{ note.excerpt | strip_html | strip_newlines }}
           </div>
-        </li>
-        <!-- <li>
-          <a class="note-title" href="designing-frontend.html"
-            >Designing frontend systems</a
-          >
-          <div class="note-summary">
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </div>
-        </li> -->
-      </ul>
-    </main>
+        {% endif %}
+        <div class="note-meta">
+          <span class="note-date">{{ note.date | date: "%d %b %Y" }}</span>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</main>
 
-    <footer>
-      <p>© Avinash Arora</p>
-    </footer>
-
-    <script>
-      function toggleNotes() {
-        const list = document.getElementById("noteList");
-        list.style.display = list.style.display === "none" ? "block" : "none";
-      }
-    </script>
-  </body>
-</html>
+<script>
+  function toggleNotes() {
+    const list = document.getElementById("noteList");
+    list.style.display = list.style.display === "none" ? "block" : "none";
+  }
+</script>
