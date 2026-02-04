@@ -3,6 +3,7 @@ title: "Manufactured Friction: Learning with AI"
 date: 2026-02-02
 summary: Reflections on learning, mistakes, and depth in the age of AI
 index_summary: Reflections on learning, mistakes, and depth in the age of AI.
+exclude_from_index: true
 tags:
   - learning
   - ai

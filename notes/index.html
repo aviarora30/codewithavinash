@@ -11,22 +11,24 @@ notes_styles: true
   <ul class="note-list" id="noteList">
     {% assign sorted_notes = site.notes | sort: "date" | reverse %}
     {% for note in sorted_notes %}
-      <li>
-        <a class="note-title" href="{{ note.url | relative_url }}"
-          >{{ note.title }}</a
-        >
-        {% assign summary_text = note.index_summary | default: note.summary %}
-        {% if summary_text %}
-          <div class="note-summary">{{ summary_text }}</div>
-        {% elsif note.excerpt %}
-          <div class="note-summary">
-            {{ note.excerpt | strip_html | strip_newlines }}
+      {% unless note.exclude_from_index %}
+        <li>
+          <a class="note-title" href="{{ note.url | relative_url }}"
+            >{{ note.title }}</a
+          >
+          {% assign summary_text = note.index_summary | default: note.summary %}
+          {% if summary_text %}
+            <div class="note-summary">{{ summary_text }}</div>
+          {% elsif note.excerpt %}
+            <div class="note-summary">
+              {{ note.excerpt | strip_html | strip_newlines }}
+            </div>
+          {% endif %}
+          <div class="note-meta">
+            <span class="note-date">{{ note.date | date: "%d %b %Y" }}</span>
           </div>
-        {% endif %}
-        <div class="note-meta">
-          <span class="note-date">{{ note.date | date: "%d %b %Y" }}</span>
-        </div>
-      </li>
+        </li>
+      {% endunless %}
     {% endfor %}
   </ul>
 </main>
