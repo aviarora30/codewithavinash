@@ -77,6 +77,16 @@
   margin-bottom: 16px;
 }
 
+.note-back-link {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.note-back-link a {
+  color: inherit;
+}
+
 .note-takeaway {
   font-style: italic;
   color: #333;
