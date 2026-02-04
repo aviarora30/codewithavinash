@@ -4,9 +4,9 @@ description: Notes by Avinash Arora on engineering leadership and frontend craft
 notes_styles: true
 ---
 <main class="notes-main">
-  <button class="notes-toggle" type="button" onclick="toggleNotes()">
+  <!-- <button class="notes-toggle" type="button" onclick="toggleNotes()">
     Hide / Show Notes
-  </button>
+  </button> -->
 
   <ul class="note-list" id="noteList">
     {% assign sorted_notes = site.notes | sort: "date" | reverse %}
@@ -33,9 +33,9 @@ notes_styles: true
   </ul>
 </main>
 
-<script>
+<!-- <script>
   function toggleNotes() {
     const list = document.getElementById("noteList");
     list.style.display = list.style.display === "none" ? "block" : "none";
   }
-</script>
+</script> -->
