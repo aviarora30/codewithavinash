@@ -77,6 +77,14 @@
   margin-bottom: 16px;
 }
 
+.note-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 12px 0 20px;
+  border-radius: 6px;
+}
+
 .note-back-link {
   font-size: 0.9rem;
   color: #777;

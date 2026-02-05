@@ -4,6 +4,8 @@ date: 2026-02-05
 summary: Reflections on learning, mistakes, and depth in the age of AI
 index_summary: Reflections on learning, mistakes, and depth in the age of AI.
 is_published: true
+image: /assets/manufactured-friction-learning-with-ai.png
+image_alt: Learning with AI
 tags:
   - learning
   - ai
