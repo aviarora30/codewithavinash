@@ -17,6 +17,15 @@ layout: default
     {% endif %}
   </div>
   <hr class="note-divider" />
+  {% if page.image %}
+    {% assign note_alt = page.image_alt | default: page.title %}
+    {% assign note_alt = note_alt | replace: "image", "" | replace: "Image", "" | strip %}
+    <img
+      src="{{ page.image | relative_url }}"
+      alt="{{ note_alt }}"
+      class="note-image"
+    />
+  {% endif %}
   <div class="note-content">
     {{ content }}
   </div>

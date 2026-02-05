@@ -9,8 +9,9 @@
     meta_description = meta_description | default: site.description %} {% assign
     meta_url = page.url | absolute_url %} {% assign meta_type = page.og_type |
     default: "website" %} {% if page.collection == "notes" %} {% assign
-    meta_type = "article" %} {% assign meta_image = page.og_image %} {% else %}
-    {% assign meta_image = page.og_image | default: site.image %} {% endif %}
+    meta_type = "article" %} {% assign meta_image = page.og_image | default:
+    page.image %} {% else %} {% assign meta_image = page.og_image | default:
+    site.image %} {% endif %}
 
     <title>{{ meta_title }}</title>
     {% if meta_description %}
@@ -51,7 +52,7 @@
     </script>
 
     <link rel="stylesheet" href="/styles.css" />
-    {% if page.notes_styles %}
+    {% if page.notes_styles or page.collection == "notes" %}
     <link rel="stylesheet" href="/notes/notes.css" />
     {% endif %}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
