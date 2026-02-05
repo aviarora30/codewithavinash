@@ -1,6 +1,7 @@
 title: Code With Avinash
 description: Personal website of Avinash Arora, engineering leader and frontend architect.
 url: https://codewithavinash.com
+image: /assets/avinash.png
 collections:
   notes:
     output: true
