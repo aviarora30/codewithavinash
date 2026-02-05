@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<main class="notes-main">
+  <p class="note-back-link"><a href="/notes">← Back to Notes</a></p>
+  <h1>{{ page.title }}</h1>
+  {% if page.summary %}
+    <div class="note-mute">{{ page.summary }}</div>
+  {% endif %}
+  <div class="note-meta">
+    <span class="note-date">{{ page.date | date: "%d %b %Y" }}</span>
+    {% if page.tags and page.tags.size > 0 %}
+      <span class="meta-separator">·</span>
+      {% for tag in page.tags %}
+        <span class="note-tag">#{{ tag }}</span>
+      {% endfor %}
+    {% endif %}
+  </div>
+  <hr class="note-divider" />
+  <div class="note-content">
+    {{ content }}
+  </div>
+</main>
