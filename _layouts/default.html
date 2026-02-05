@@ -16,8 +16,11 @@
     <title>{{ meta_title }}</title>
     {% if meta_description %}
     <meta name="description" content="{{ meta_description }}" />
-    {% endif %} {% if page.canonical %}
-    <link rel="canonical" href="{{ page.canonical }}" />
+    {% endif %}
+    {% if page.canonical %}
+      <link rel="canonical" href="{{ page.canonical }}" />
+    {% else %}
+      <link rel="canonical" href="{{ meta_url }}" />
     {% endif %}
 
     <meta property="og:title" content="{{ meta_title }}" />
