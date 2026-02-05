@@ -1,9 +1,9 @@
 ---
 title: "Manufactured Friction: Learning with AI"
-date: 2026-02-02
+date: 2026-02-05
 summary: Reflections on learning, mistakes, and depth in the age of AI
 index_summary: Reflections on learning, mistakes, and depth in the age of AI.
-is_published: false
+is_published: true
 tags:
   - learning
   - ai
@@ -11,6 +11,7 @@ tags:
   - thinking
   - experience
 ---
+
 I recently started learning n8n and agentic AI systems, and it made me realise
 how constrained most conventional learning formats are.
 
