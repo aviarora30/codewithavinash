@@ -11,7 +11,7 @@ notes_styles: true
   <ul class="note-list" id="noteList">
     {% assign sorted_notes = site.notes | sort: "date" | reverse %}
     {% for note in sorted_notes %}
-      {% unless note.exclude_from_index %}
+      {% unless note.is_published == false %}
         <li>
           <a class="note-title" href="{{ note.url | relative_url }}"
             >{{ note.title }}</a
