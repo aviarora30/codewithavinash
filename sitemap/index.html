@@ -1,0 +1,29 @@
+---
+title: Sitemap
+description: Sitemap for codewithavinash.com
+---
+<main class="notes-main">
+  <h1>Sitemap</h1>
+  <p>Quick links to key pages and published notes.</p>
+
+  <h2>Pages</h2>
+  <ul class="note-list">
+    <li><a class="note-title" href="/">Home</a></li>
+    <li><a class="note-title" href="/about/">About</a></li>
+    <li><a class="note-title" href="/notes/">Notes</a></li>
+  </ul>
+
+  <h2>Notes</h2>
+  <ul class="note-list">
+    {% assign sorted_notes = site.notes | sort: "date" | reverse %}
+    {% for note in sorted_notes %}
+      {% unless note.is_published == false %}
+        <li>
+          <a class="note-title" href="{{ note.url | relative_url }}"
+            >{{ note.title }}</a
+          >
+        </li>
+      {% endunless %}
+    {% endfor %}
+  </ul>
+</main>
