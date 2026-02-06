@@ -6,6 +6,7 @@ index_summary: Reflections on learning, mistakes, and depth in the age of AI.
 is_published: true
 image: /assets/manufactured-friction-learning-with-ai.png
 image_alt: Learning with AI
+og_image: /assets/ogImages/manufactured-friction-learning-with-ai.jpg
 tags:
   - learning
   - ai
