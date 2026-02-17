@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    {% assign meta_title = page.title | default: site.title %} {% assign
+    {% assign meta_title = page.title | default: site.title %}
+    {% if page.collection == "notes" and page.title %}
+      {% assign meta_title = page.title | append: " | " | append: site.title %}
+    {% endif %}
+    {% assign
     meta_description = page.description | default: page.summary %} {% assign
     meta_description = meta_description | default: site.description %} {% assign
     meta_url = page.url | absolute_url %} {% assign meta_type = page.og_type |
