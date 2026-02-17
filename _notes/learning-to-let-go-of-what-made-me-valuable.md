@@ -5,6 +5,9 @@ summary: A reflection on moving from being the fastest problem-solver in the roo
 index_summary: From being the go-to engineer to building scalable impact.
 is_published: true
 read_time: "7 min read"
+image: /assets/learning-to-let-go-of-what-made-me-valuable.png
+image_alt: A small figure crossing a long bridge into soft morning light, symbolizing transition and growth.
+og_image: /assets/ogImages/learning-to-let-go-of-what-made-me-valuable.jpg
 tags:
   - engineering-leadership
   - software-engineering
