@@ -26,6 +26,10 @@ notes_styles: true
           {% endif %}
           <div class="note-meta">
             <span class="note-date">{{ note.date | date: "%d %b %Y" }}</span>
+            {% if note.read_time %}
+              <span class="meta-separator">·</span>
+              <span class="note-read-time">{{ note.read_time }}</span>
+            {% endif %}
           </div>
         </li>
       {% endunless %}
