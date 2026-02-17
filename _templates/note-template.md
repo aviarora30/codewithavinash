@@ -15,6 +15,9 @@ index_summary: One line for the notes listing (can differ from summary).
 # Optional – set to false to hide from the Notes index (draft)
 is_published: false
 
+# Optional – estimated read time (e.g. "7 min read"); shown in note meta and on Notes index
+# read_time: "7 min read"
+
 # Optional – in-note hero/header image
 image: /assets/your-image.png
 image_alt: Brief description of the image for accessibility

@@ -9,8 +9,12 @@ layout: default
   {% endif %}
   <div class="note-meta">
     <span class="note-date">{{ page.date | date: "%d %b %Y" }}</span>
-    {% if page.tags and page.tags.size > 0 %}
+    {% if page.read_time %}
       <span class="meta-separator">·</span>
+      <span class="note-read-time">{{ page.read_time }}</span>
+    {% endif %}
+    {% if page.tags and page.tags.size > 0 %}
+      <br />
       {% for tag in page.tags %}
         <span class="note-tag">#{{ tag }}</span>
       {% endfor %}
