@@ -16,7 +16,7 @@
   margin-top: 0.5em;
 }
 
-.note-meta .note-tag {
+.note-meta .note-tag + .note-tag {
   margin-left: 0.6em;
 }
 
