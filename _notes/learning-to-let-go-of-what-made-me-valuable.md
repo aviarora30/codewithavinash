@@ -45,6 +45,10 @@ Gradually, things changed. Conversations became less about "what should we do?" 
 
 ## Scaling Beyond Myself
 
-The real shift became visible when I noticed what I could take on. I was able to step into additional tracks within the same project. Over time, that expanded into handling multiple projects in parallel. The capacity I had earlier spent on unblocking was now available for broader ownership. I had finally stepped out of the trap I built for myself and reached somewhere new.
+The real shift became visible when I noticed what I could take on. As fewer PRs required my direct review and teams began owning daily delivery, my time opened up in ways I hadn’t experienced before. I was no longer spending most of my energy unblocking execution. Instead, I could focus more on customer satisfaction and overall outcomes.
+
+That space allowed me to step into additional tracks within the same project and eventually handle multiple projects in parallel. But more importantly, my scope changed. I began driving quality practices across teams, introducing clearer quality gates, and initiating process improvements that reduced recurring issues. Instead of asking, “How do we fix this?” I started asking, “Why does this category of issue exist in the first place?”
+
+Over time, my focus shifted from reviewing outputs to designing guardrails. The goal was no longer to catch mistakes at the end, but to prevent them earlier through better systems and shared standards. The capacity I had earlier spent on unblocking was now available for broader ownership. I had finally stepped out of the trap I built for myself and reached somewhere new.
 
 I still value speed. That has not changed. But I no longer see it as the highest form of contribution. Earlier, I measured my impact by how quickly I could solve something. Now I pay more attention to whether the team can think, decide, and move without waiting for me. The goal is not to be the fastest problem-solver in the room. It is to build a room where problems do not wait for you. The shift has been uncomfortable at times, but it has allowed me to grow in ways speed alone never could.
