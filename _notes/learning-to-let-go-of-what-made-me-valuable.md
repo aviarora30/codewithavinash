@@ -3,7 +3,7 @@ title: "Learning to Let Go of What Made Me Valuable"
 date: 2026-02-17
 summary: A reflection on moving from being the fastest problem-solver in the room to building a team that does not depend on one.
 index_summary: From being the go-to engineer to building scalable impact.
-is_published: true
+is_published: false
 read_time: "7 min read"
 image: /assets/learning-to-let-go-of-what-made-me-valuable.png
 image_alt: A small figure crossing a long bridge into soft morning light, symbolizing transition and growth.
