@@ -4,7 +4,7 @@ date: 2026-02-17
 summary: A reflection on moving from being the fastest problem-solver in the room to building a team that does not depend on one.
 index_summary: From being the go-to engineer to building scalable impact.
 is_published: false
-publish_at: 2026-02-19 06:00
+publish_at: 2026-02-19
 read_time: "7 min read"
 image: /assets/learning-to-let-go-of-what-made-me-valuable.png
 image_alt: A small figure crossing a long bridge into soft morning light, symbolizing transition and growth.
