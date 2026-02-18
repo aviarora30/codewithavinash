@@ -1,11 +1,23 @@
 #!/usr/bin/env node
 /**
  * Scheduled publish: set is_published to true for notes where publish_at is in the past.
+ * All times are interpreted in IST (Indian Standard Time, UTC+5:30).
  * Run from repo root. Uses only Node built-ins (fs, path).
  */
 
 const fs = require("fs");
 const path = require("path");
+
+const IST_OFFSET = "+05:30";
+
+/** Parse a date or datetime string as IST; returns a Date or NaN. */
+function parseAsIST(str) {
+  const s = str.trim().replace(/^["']|["']$/g, "");
+  const iso = s.includes(" ")
+    ? s.replace(" ", "T") + IST_OFFSET
+    : s + "T00:00:00" + IST_OFFSET;
+  return new Date(iso);
+}
 
 const notesDir = path.join(__dirname, "..", "_notes");
 const files = fs.readdirSync(notesDir).filter((f) => f.endsWith(".md") && !f.endsWith(".bak"));
@@ -28,8 +40,8 @@ for (const file of files) {
 
   if (isPublishedMatch && isPublishedMatch[1].trim().toLowerCase() === "true") continue;
 
-  const publishAtRaw = publishAtMatch[1].trim().replace(/^["']|["']$/g, "");
-  const publishTime = new Date(publishAtRaw);
+  const publishAtRaw = publishAtMatch[1].trim();
+  const publishTime = parseAsIST(publishAtRaw);
   if (isNaN(publishTime.getTime())) continue;
   if (publishTime > new Date()) continue;
 
