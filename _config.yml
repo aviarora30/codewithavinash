@@ -5,7 +5,7 @@ image: /assets/avinash.png
 collections:
   notes:
     output: true
-    permalink: /notes/:name.html
+    permalink: /notes/:name/
 defaults:
   - scope:
       path: ""
