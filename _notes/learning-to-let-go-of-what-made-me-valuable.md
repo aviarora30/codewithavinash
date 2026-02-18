@@ -1,11 +1,10 @@
 ---
-
 title: "Learning to Let Go of What Made Me Valuable"
-date: 2026-02-17
+date: 2026-02-19
 summary: A reflection on moving from being the fastest problem-solver in the room to building a team that does not depend on one.
 index_summary: From being the go-to engineer to building scalable impact.
-is_published: true
-publish_at: 2026-02-19
+is_published: false
+publish_at: 2026-02-19 06:00
 read_time: "7 min read"
 image: /assets/learning-to-let-go-of-what-made-me-valuable.png
 image_alt: A small figure crossing a long bridge into soft morning light, symbolizing transition and growth.
@@ -17,7 +16,6 @@ tags:
   - mentorship
   - team-building
 ---
-
 
 Early in my career, my value felt pretty straightforward. I needed to be the person who solves things fast. If something looked complicated, I'd take it. If a ticket was stuck, I'd jump in. If a PR needed "a small fix," I'd usually just make the change instead of going back and forth. It worked. Things moved. Seniors trusted me. I became the person who could be counted on when it mattered. And somewhere along the way, I started needing that to be true.
 
