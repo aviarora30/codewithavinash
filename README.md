@@ -18,8 +18,7 @@ A personal website showcasing the work and insights of Avinash Arora, an enginee
 │   └── index.html        # About page
 ├── notes/
 │   ├── index.html        # Notes listing page
-│   ├── notes.css         # Note-specific styles
-│   └── note-template.html # HTML note template (legacy)
+│   └── notes.css         # Note-specific styles
 ├── robots.txt            # Crawl directives
 ├── sitemap.xml           # Generated sitemap (Jekyll)
 ├── sitemap/              # Human-readable sitemap page
