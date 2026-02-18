@@ -27,9 +27,7 @@ A personal website showcasing the work and insights of Avinash Arora, an enginee
 
 ## Pages
 
-- **Home** (`/`) - Main landing page
-- **About** (`/about`) - Information about Avinash Arora
-- **Notes** (`/notes`) - Articles and insights from experience
+The site has a home page, an about page, and a **notes** section. The notes index at `/notes` lists all articles; each note is a Markdown file in `_notes/` with YAML front matter, built by Jekyll at `/notes/:name/` using the `note` layout. Add a new `.md` in `_notes/` to publish another note.
 
 ## Styling
 
