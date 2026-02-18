@@ -49,10 +49,12 @@ for (const file of files) {
   if (isPublishedMatch) {
     newFrontmatter = frontmatterStr.replace(/^is_published:\s*false\s*$/m, "is_published: true");
   } else {
-    newFrontmatter = frontmatterStr.trimEnd() + "\nis_published: true\n";
+    newFrontmatter = frontmatterStr.trimEnd() + "\nis_published: true";
   }
   if (newFrontmatter === frontmatterStr) continue;
 
-  fs.writeFileSync(filePath, "---\n" + newFrontmatter + "\n---\n" + body);
+  const outFrontmatter = newFrontmatter.replace(/^\n+/, "").trimEnd();
+  const outBody = body.replace(/^\n+/, "\n");
+  fs.writeFileSync(filePath, "---\n" + outFrontmatter + "\n---\n" + outBody);
   console.log("Updated:", filePath);
 }
