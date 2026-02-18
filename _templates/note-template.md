@@ -15,6 +15,9 @@ index_summary: One line for the notes listing (can differ from summary).
 # Optional – set to false to hide from the Notes index (draft)
 is_published: false
 
+# Optional – when this time has passed, a daily GitHub Action will set is_published to true (e.g. YYYY-MM-DD or YYYY-MM-DD HH:MM:SS)
+# publish_at: YYYY-MM-DD
+
 # Optional – estimated read time (e.g. "7 min read"); shown in note meta and on Notes index
 # read_time: "7 min read"
 
