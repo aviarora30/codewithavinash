@@ -1,6 +1,9 @@
 name: Scheduled publish notes
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     # Every 15 minutes (for testing); revert to "30 1 * * *" for daily 7:00 AM IST
     - cron: "*/15 * * * *"
