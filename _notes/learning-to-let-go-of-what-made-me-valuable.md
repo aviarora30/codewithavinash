@@ -3,7 +3,7 @@ title: "Learning to Let Go of What Made Me Valuable"
 date: 2025-02-18
 summary: A reflection on moving from being the fastest problem-solver in the room to building a team that does not depend on one.
 index_summary: From being the go-to engineer to building scalable impact.
-is_published: false
+is_published: true
 publish_at: 2026-02-19 06:00
 read_time: "7 min read"
 image: /assets/learning-to-let-go-of-what-made-me-valuable.png
