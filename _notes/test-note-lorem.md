@@ -3,8 +3,8 @@ title: "Test Note (Lorem Ipsum)"
 date: 2026-02-19
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 index_summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-is_published: true
-publish_at: 2026-02-19 08:00
+is_published: false
+publish_at: 2026-02-19 11:00
 read_time: "2 min read"
 image: /assets/test-note-lorem.png
 image_alt: Placeholder for test note.
