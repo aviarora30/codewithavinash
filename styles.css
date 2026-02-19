@@ -32,7 +32,6 @@ main,
 footer {
   max-width: 720px;
   margin: 0 auto;
-  padding: 1.75rem 1.75rem;
   background-color: #ffffff;
 }
 
@@ -40,20 +39,24 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  margin-top: 2.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1.75rem;
   border-radius: 14px 14px 0 0;
 }
 
 header.is-stuck {
+  border-radius: 0;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
 }
 
 main {
   margin-top: 0;
+  padding: 1.75rem 1.75rem;
 }
 
 footer {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1.75rem;
   border-radius: 0 0 14px 14px;
 }
 
@@ -173,10 +176,18 @@ section + section {
 
 /* Mobile tweaks */
 @media (max-width: 640px) {
-  header,
-  main,
-  footer {
+  header {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1.25rem;
+  }
+
+  main {
     padding: 1.25rem;
+  }
+
+  footer {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1.25rem;
   }
 
   h1 {
