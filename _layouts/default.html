@@ -85,6 +85,21 @@
     {% include header.html %} {{ content }} {% include footer.html %}
     <script>
       (function () {
+        var header = document.querySelector("header");
+        function updateStickyHeader() {
+          var halfHeader = header.offsetHeight / 2;
+          if (window.scrollY > halfHeader) {
+            header.classList.add("is-stuck");
+          } else {
+            header.classList.remove("is-stuck");
+          }
+        }
+        window.addEventListener("scroll", updateStickyHeader, { passive: true });
+        updateStickyHeader();
+      })();
+    </script>
+    <script>
+      (function () {
         function sendEvent(eventName, params) {
           if (typeof gtag === "function") {
             gtag("event", eventName, params || {});

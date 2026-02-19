@@ -37,8 +37,15 @@ footer {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   margin-top: 2.5rem;
   border-radius: 14px 14px 0 0;
+}
+
+header.is-stuck {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
 }
 
 main {
