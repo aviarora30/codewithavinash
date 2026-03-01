@@ -1,11 +1,11 @@
 ---
 title: "What I Forgot About Building"
-date: 2025-03-02
+date: 2026-03-02
 summary: A hackathon reminded me of the clarity and energy that comes from deep, hands-on work — and how easy it is to drift away from it as your role grows.
 
 index_summary: Rediscovering what it feels like to be fully immersed in one problem.
-is_published: true
-publish_at: 2025-03-08 06:00
+is_published: false
+publish_at: 2026-03-08 06:00
 read_time: "6 min read"
 tags:
   - Leadership
