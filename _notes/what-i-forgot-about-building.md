@@ -2,17 +2,18 @@
 title: "What I Forgot About Building"
 date: 2026-03-02
 summary: A hackathon reminded me of the clarity and energy that comes from deep, hands-on work — and how easy it is to drift away from it as your role grows.
-
 index_summary: Rediscovering what it feels like to be fully immersed in one problem.
 is_published: false
 publish_at: 2026-03-08 06:00
 read_time: "6 min read"
+image: /assets/what-i-forgot-about-building.png
+image_alt: Headphones on a desk next to a laptop with code on screen
+og_image: /assets/ogImages/what-i-forgot-about-building.jpg
 tags:
-  - leadership
   - engineering-leadership
-  - career-growth
-  - software-engineering
-  - personal-reflection
+  - career-evolution
+  - leadership-reflection
+  - craft
 ---
 
 I recently participated in GeekCombat, a hackathon organised at To The New. I review code, get into technical discussions, and occasionally debug things with the team. So it's not like I've been completely away from the craft.
@@ -56,3 +57,7 @@ But that depth of focus still matters to me. Deep, uninterrupted work isn't some
 I don't want to go back to writing code full-time. But I also don't want to drift so far from building that I forget what that state feels like. Even if I'm not doing it every day, I want to stay close enough to the craft to remember why I started.
 
 Maybe growth doesn't have to mean complete detachment from the craft. It might just mean being intentional about returning to it once in a while.
+
+<div style="text-align: center;">
+  <img src="/assets/what-i-forgot-about-building-2.jpg" alt="Sitting at a Mac with headphones on, focused on the screen, unaware of the camera" style="width: 50%;">
+</div>
