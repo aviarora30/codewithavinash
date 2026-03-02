@@ -50,7 +50,7 @@ This site uses Jekyll layouts and a `notes` collection. CSS files are built with
 
 If you’re on Ruby 3.2+, you can use the latest Bundler and run `bundle exec jekyll serve`.
 
-**When you change CSS:** run `ruby scripts/asset_hashes.rb`, then commit the generated `_data/asset_hashes.yml` and the new `styles.<hash>.css` and `notes/notes.<hash>.css` files. The next Jekyll build (e.g. on GitHub Pages) will then reference the hashed filenames for cache busting. If the script has not been run, the layout falls back to `styles.css` and `notes/notes.css`.
+**Production (GitHub Pages):** The workflow `.github/workflows/deploy-pages.yml` runs `ruby scripts/asset_hashes.rb` before every Jekyll build on push to `main`, so you don’t need to run the script or commit generated files when you change CSS. Enable it in the repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**. If the script hasn’t run (e.g. local), the layout falls back to `styles.css` and `notes/notes.css`.
 
 ## Hosting
 
