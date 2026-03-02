@@ -35,18 +35,22 @@ The site uses `styles.css` for styling all pages. Each HTML page links to this s
 
 ## Build and Preview
 
-This site uses Jekyll layouts and a `notes` collection. GitHub Pages builds it automatically on publish.
+This site uses Jekyll layouts and a `notes` collection. CSS files are built with content hashes for cache busting (e.g. `styles.a1b2c3d4.css`).
 
-Local preview:
+**Local preview:**
 
-1. Install Bundler (Ruby 2.6 users):
+1. Generate hashed CSS and asset data (run from repo root):
+   - `ruby scripts/asset_hashes.rb`
+2. Install Bundler (Ruby 2.6 users):
    - `gem install bundler -v 2.4.22`
-2. Run the site:
+3. Run the site:
    - `bundle _2.4.22_ exec jekyll serve`
-3. Visit:
+4. Visit:
    - `http://localhost:4000`
 
 If you’re on Ruby 3.2+, you can use the latest Bundler and run `bundle exec jekyll serve`.
+
+**When you change CSS:** run `ruby scripts/asset_hashes.rb`, then commit the generated `_data/asset_hashes.yml` and the new `styles.<hash>.css` and `notes/notes.<hash>.css` files. The next Jekyll build (e.g. on GitHub Pages) will then reference the hashed filenames for cache busting. If the script has not been run, the layout falls back to `styles.css` and `notes/notes.css`.
 
 ## Hosting
 

@@ -75,9 +75,11 @@
       gtag("config", "G-8N7ZS3VK57");
     </script>
 
-    <link rel="stylesheet" href="/styles.css" />
+    {% assign css_styles = site.data.asset_hashes.styles | default: "styles.css" %}
+    <link rel="stylesheet" href="/{{ css_styles }}" />
     {% if page.notes_styles or page.collection == "notes" %}
-    <link rel="stylesheet" href="/notes/notes.css" />
+    {% assign css_notes = site.data.asset_hashes.notes_css | default: "notes/notes.css" %}
+    <link rel="stylesheet" href="/{{ css_notes }}" />
     {% endif %}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>

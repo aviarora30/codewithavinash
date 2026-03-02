@@ -1,0 +1,102 @@
+/* notes.css - note index & single note pages */
+
+.notes-main {
+  /* Uses the same styling as main in styles.css */
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.75rem 1.75rem;
+  background-color: #ffffff;
+  margin-top: 0;
+  line-height: 1.6;
+}
+
+.note-meta {
+  font-size: 0.85em;
+  color: #777;
+  margin-top: 0.5em;
+}
+
+.note-meta .note-tag + .note-tag {
+  margin-left: 0.6em;
+}
+
+.meta-separator {
+  margin: 0 0.4em;
+}
+
+.note-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.note-list li {
+  margin-bottom: 24px;
+  padding: 8px 0;
+}
+
+.note-title {
+  font-size: 1.3rem;
+  color: #111;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.25);
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.note-title:hover {
+  text-decoration-color: rgba(0, 0, 0, 0.6);
+}
+
+.note-summary {
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: 2px;
+}
+
+.notes-toggle {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #007acc;
+}
+
+.note-mute {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.note-divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+.note-content p {
+  margin-bottom: 16px;
+}
+
+.note-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 12px 0 20px;
+  border-radius: 6px;
+}
+
+.note-back-link {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.note-back-link a {
+  color: inherit;
+}
+
+.note-takeaway {
+  font-style: italic;
+  color: #333;
+  font-size: 0.95rem;
+}
