@@ -4,10 +4,11 @@ date: 2026-01-26
 summary: Written from experience leading and mentoring engineering teams
 index_summary: How unclear ownership quietly kills team performance.
 tags:
-  - engineeringLeadership
+  - engineering-leadership
   - ownership
-  - teamPerformance
+  - team-performance
 ---
+
 When people talk about performance, they often jump straight to code.
 Frameworks, bundles, tooling, Lighthouse scores. But in my experience,
 performance problems show up much earlier, and much higher up, than the

@@ -8,11 +8,11 @@ is_published: false
 publish_at: 2026-03-08 06:00
 read_time: "6 min read"
 tags:
-  - Leadership
-  - Engineering Leadership
-  - Career Growth
-  - Software Engineering
-  - Personal Reflection
+  - leadership
+  - engineering-leadership
+  - career-growth
+  - software-engineering
+  - personal-reflection
 ---
 
 I recently participated in GeekCombat, a hackathon organised at To The New. I review code, get into technical discussions, and occasionally debug things with the team. So it's not like I've been completely away from the craft.

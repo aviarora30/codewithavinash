@@ -37,7 +37,7 @@ og_image: /assets/ogImages/your-og-image.jpg
 # Optional – OG type (notes use "article" by default in default layout)
 # og_type: article
 
-# Optional – tags for the note (shown on the note page)
+# Optional – tags for the note (shown on the note page). Use kebab-case (lowercase, hyphenated), e.g. engineering-leadership, career-growth.
 tags:
   - tag-one
   - tag-two
