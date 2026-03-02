@@ -8,7 +8,7 @@ publish_at: 2026-03-08 06:00
 read_time: "6 min read"
 image: /assets/what-i-forgot-about-building.jpg
 image_alt: Headphones on a desk next to a laptop with code on screen
-og_image: /assets/ogImages/what-i-forgot-about-building.jpg
+#og_image: /assets/ogImages/what-i-forgot-about-building.jpg
 tags:
   - engineering-leadership
   - career-evolution
