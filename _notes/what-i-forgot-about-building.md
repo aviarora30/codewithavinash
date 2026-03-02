@@ -59,5 +59,5 @@ I don't want to go back to writing code full-time. But I also don't want to drif
 Maybe growth doesn't have to mean complete detachment from the craft. It might just mean being intentional about returning to it once in a while.
 
 <div style="text-align: center;">
-  <img src="/assets/what-i-forgot-about-building-2.jpg" alt="Sitting at a Mac with headphones on, focused on the screen, unaware of the camera" style="width: 50%;">
+  <img src="/assets/what-i-forgot-about-building-2.jpg" alt="Sitting at a Mac with headphones on, focused on the screen, unaware of the camera" style="width: 60%; border-radius: 6px;     box-shadow: 0 4px 9px rgba(0, 0, 0, 0.8);">
 </div>
