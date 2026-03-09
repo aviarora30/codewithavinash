@@ -8,7 +8,7 @@ notes_styles: true
   <ul class="note-list tag-list" id="noteList">
     {% for slug in site.data.tags.tag_slugs %}
       <li>
-        <a class="note-title" href="{{ '/tags/' | append: slug | relative_url }}">#{{ slug }}</a>
+        <a class="note-title" href="{{ '/tags/' | append: slug | append: '/' | relative_url }}">#{{ slug }}</a>
       </li>
     {% endfor %}
   </ul>
