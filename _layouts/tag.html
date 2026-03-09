@@ -3,12 +3,12 @@ layout: default
 notes_styles: true
 ---
 <main class="notes-main">
-  <p class="note-back-link"><a href="/notes">← Back to Notes</a></p>
-  <h1>Notes tagged ‘{{ page.tag }}’</h1>
+  <p class="note-back-link"><a href="/tags/">← Back to Tags</a></p>
+  <h1>#{{ page.tag }}</h1>
+  {% assign published_tagged = site.notes | where_exp: "n", "n.tags contains page.tag" | where_exp: "n", "n.is_published != false" | sort: "date" | reverse %}
+  <p class="note-mute">{{ published_tagged.size }} article{% if published_tagged.size != 1 %}s{% endif %}</p>
   <ul class="note-list">
-    {% assign tagged_notes = site.notes | where_exp: "n", "n.tags contains page.tag" | sort: "date" | reverse %}
-    {% for note in tagged_notes %}
-      {% unless note.is_published == false %}
+    {% for note in published_tagged %}
         <li>
           <a class="note-title" href="{{ note.url | relative_url }}"
             >{{ note.title }}</a
@@ -29,7 +29,6 @@ notes_styles: true
             {% endif %}
           </div>
         </li>
-      {% endunless %}
     {% endfor %}
   </ul>
 </main>

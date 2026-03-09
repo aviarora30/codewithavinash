@@ -48,6 +48,17 @@ tag_slugs = tag_slugs.uniq.sort
 # Remove existing generated tag pages so removed tags disappear
 FileUtils.rm_rf(TAGS_DIR) if Dir.exist?(TAGS_DIR)
 
+# Write tags index page and data for listing all tags
+FileUtils.mkdir_p(TAGS_DIR)
+File.write(File.join(TAGS_DIR, "index.md"), {
+  "layout" => "tags_index",
+  "title" => "Tags",
+  "permalink" => "/tags/",
+}.to_yaml + "---\n")
+
+FileUtils.mkdir_p("_data")
+File.write("_data/tags.yml", { "tag_slugs" => tag_slugs }.to_yaml)
+
 tag_slugs.each do |slug|
   dir = File.join(TAGS_DIR, slug)
   FileUtils.mkdir_p(dir)
