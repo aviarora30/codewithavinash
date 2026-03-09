@@ -34,6 +34,9 @@ jobs:
       - name: Generate asset hashes
         run: ruby scripts/asset_hashes.rb
 
+      - name: Generate tag pages
+        run: ruby scripts/generate_tag_pages.rb
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 

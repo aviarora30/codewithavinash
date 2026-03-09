@@ -39,8 +39,9 @@ This site uses Jekyll layouts and a `notes` collection. CSS files are built with
 
 **Local preview:**
 
-1. Generate hashed CSS and asset data (run from repo root):
+1. Generate hashed CSS, tag pages, and asset data (run from repo root):
    - `ruby scripts/asset_hashes.rb`
+   - `ruby scripts/generate_tag_pages.rb`
 2. Install Bundler (Ruby 2.6 users):
    - `gem install bundler -v 2.4.22`
 3. Run the site:
@@ -50,7 +51,7 @@ This site uses Jekyll layouts and a `notes` collection. CSS files are built with
 
 If you’re on Ruby 3.2+, you can use the latest Bundler and run `bundle exec jekyll serve`.
 
-**Production (GitHub Pages):** The workflow `.github/workflows/deploy-pages.yml` runs `ruby scripts/asset_hashes.rb` before every Jekyll build on push to `main`, so you don’t need to run the script or commit generated files when you change CSS. Enable it in the repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**. If the script hasn’t run (e.g. local), the layout falls back to `styles.css` and `notes/notes.css`.
+**Production (GitHub Pages):** The workflow `.github/workflows/deploy-pages.yml` runs `ruby scripts/asset_hashes.rb` and `ruby scripts/generate_tag_pages.rb` before every Jekyll build on push to `main`, so you don’t need to run the scripts or commit generated files when you change CSS or notes/tags. Enable it in the repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**. If the scripts haven’t run (e.g. local), the layout falls back to `styles.css` and `notes/notes.css`, and tag pages will be missing until you run the tag script.
 
 ## Hosting
 

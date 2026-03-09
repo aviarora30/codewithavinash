@@ -16,7 +16,7 @@ layout: default
     {% if page.tags and page.tags.size > 0 %}
       <br />
       {% for tag in page.tags %}
-        <span class="note-tag">#{{ tag }}</span>
+        <a class="note-tag" href="{{ '/tags/' | append: tag | relative_url }}">#{{ tag }}</a>
       {% endfor %}
     {% endif %}
   </div>

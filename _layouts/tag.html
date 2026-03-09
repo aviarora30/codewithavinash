@@ -1,0 +1,35 @@
+---
+layout: default
+notes_styles: true
+---
+<main class="notes-main">
+  <p class="note-back-link"><a href="/notes">← Back to Notes</a></p>
+  <h1>Notes tagged ‘{{ page.tag }}’</h1>
+  <ul class="note-list">
+    {% assign tagged_notes = site.notes | where_exp: "n", "n.tags contains page.tag" | sort: "date" | reverse %}
+    {% for note in tagged_notes %}
+      {% unless note.is_published == false %}
+        <li>
+          <a class="note-title" href="{{ note.url | relative_url }}"
+            >{{ note.title }}</a
+          >
+          {% assign summary_text = note.index_summary | default: note.summary %}
+          {% if summary_text %}
+            <div class="note-summary">{{ summary_text }}</div>
+          {% elsif note.excerpt %}
+            <div class="note-summary">
+              {{ note.excerpt | strip_html | strip_newlines }}
+            </div>
+          {% endif %}
+          <div class="note-meta">
+            <span class="note-date">{{ note.date | date: "%d %b %Y" }}</span>
+            {% if note.read_time %}
+              <span class="meta-separator">·</span>
+              <span class="note-read-time">{{ note.read_time }}</span>
+            {% endif %}
+          </div>
+        </li>
+      {% endunless %}
+    {% endfor %}
+  </ul>
+</main>
