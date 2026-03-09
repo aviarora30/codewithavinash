@@ -54,6 +54,7 @@ File.write(File.join(TAGS_DIR, "index.md"), {
   "layout" => "tags_index",
   "title" => "Tags",
   "permalink" => "/tags/",
+  "notes_styles" => true,
 }.to_yaml + "---\n")
 
 FileUtils.mkdir_p("_data")
@@ -69,6 +70,7 @@ tag_slugs.each do |slug|
     "tag" => slug,
     "title" => title,
     "permalink" => "/tags/#{slug}/",
+    "notes_styles" => true,
   }
   body = ""
   content = front_matter.to_yaml + "---\n" + body

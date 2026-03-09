@@ -6,29 +6,29 @@ notes_styles: true
   <p class="note-back-link"><a href="/tags/">← Back to Tags</a></p>
   <h1>#{{ page.tag }}</h1>
   {% assign published_tagged = site.notes | where_exp: "n", "n.tags contains page.tag" | where_exp: "n", "n.is_published != false" | sort: "date" | reverse %}
-  <p class="note-mute">{{ published_tagged.size }} article{% if published_tagged.size != 1 %}s{% endif %}</p>
+  <p class="note-mute note-tag-count">{{ published_tagged.size }} note{% if published_tagged.size != 1 %}s{% endif %}</p>
   <ul class="note-list">
     {% for note in published_tagged %}
-        <li>
-          <a class="note-title" href="{{ note.url | relative_url }}"
-            >{{ note.title }}</a
-          >
-          {% assign summary_text = note.index_summary | default: note.summary %}
-          {% if summary_text %}
-            <div class="note-summary">{{ summary_text }}</div>
-          {% elsif note.excerpt %}
-            <div class="note-summary">
-              {{ note.excerpt | strip_html | strip_newlines }}
-            </div>
-          {% endif %}
-          <div class="note-meta">
-            <span class="note-date">{{ note.date | date: "%d %b %Y" }}</span>
-            {% if note.read_time %}
-              <span class="meta-separator">·</span>
-              <span class="note-read-time">{{ note.read_time }}</span>
-            {% endif %}
+      <li>
+        <a class="note-title" href="{{ note.url | relative_url }}"
+          >{{ note.title }}</a
+        >
+        {% assign summary_text = note.index_summary | default: note.summary %}
+        {% if summary_text %}
+          <div class="note-summary">{{ summary_text }}</div>
+        {% elsif note.excerpt %}
+          <div class="note-summary">
+            {{ note.excerpt | strip_html | strip_newlines }}
           </div>
-        </li>
+        {% endif %}
+        <div class="note-meta">
+          <span class="note-date">{{ note.date | date: "%d %b %Y" }}</span>
+          {% if note.read_time %}
+            <span class="meta-separator">·</span>
+            <span class="note-read-time">{{ note.read_time }}</span>
+          {% endif %}
+        </div>
+      </li>
     {% endfor %}
   </ul>
 </main>

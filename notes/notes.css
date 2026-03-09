@@ -35,7 +35,9 @@
 
 .note-list {
   list-style: none;
+  list-style-type: none;
   padding: 0;
+  padding-left: 0;
   margin: 0;
 }
 
@@ -44,7 +46,21 @@
   padding: 8px 0;
 }
 
-.note-title {
+/* Tighter spacing on tags index */
+.notes-main .tag-list li {
+  margin-bottom: 10px;
+  padding: 2px 0;
+}
+
+/* Tighter gap between #tag heading and note count on individual tag page */
+.note-tag-count {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Override global link color so titles match notes index: dark with subtle underline */
+.notes-main .note-list .note-title,
+.notes-main .note-list a.note-title {
   font-size: 1.3rem;
   color: #111;
   text-decoration: underline;
@@ -53,7 +69,8 @@
   cursor: pointer;
 }
 
-.note-title:hover {
+.notes-main .note-list .note-title:hover,
+.notes-main .note-list a.note-title:hover {
   text-decoration-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -101,7 +118,13 @@
 }
 
 .note-back-link a {
-  color: inherit;
+  color: #777;
+  text-decoration: none;
+}
+
+.note-back-link a:hover {
+  color: #555;
+  text-decoration: underline;
 }
 
 .note-takeaway {

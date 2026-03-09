@@ -75,10 +75,17 @@
       gtag("config", "G-8N7ZS3VK57");
     </script>
 
-    {% assign css_styles = site.data.asset_hashes.styles | default: "styles.css" %}
+    {% comment %}In development use source CSS so edits apply without running asset script; in production use hashed files from CI when available, else fall back to source.{% endcomment %}
+    {% if site.environment == "production" and site.data.asset_hashes %}
+      {% assign css_styles = site.data.asset_hashes.styles | default: "styles.css" %}
+      {% assign css_notes = site.data.asset_hashes.notes_css | default: "notes/notes.css" %}
+    {% else %}
+      {% assign css_styles = "styles.css" %}
+      {% assign css_notes = "notes/notes.css" %}
+    {% endif %}
     <link rel="stylesheet" href="/{{ css_styles }}" />
-    {% if page.notes_styles or page.collection == "notes" %}
-    {% assign css_notes = site.data.asset_hashes.notes_css | default: "notes/notes.css" %}
+    {% assign show_notes_css = page.notes_styles or page.collection == "notes" or page.layout == "tag" or page.layout == "tags_index" %}
+    {% if show_notes_css or page.url contains "/tags/" %}
     <link rel="stylesheet" href="/{{ css_notes }}" />
     {% endif %}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />

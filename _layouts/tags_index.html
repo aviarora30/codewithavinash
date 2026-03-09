@@ -5,7 +5,7 @@ notes_styles: true
 <main class="notes-main">
   <p class="note-back-link"><a href="/notes">← Back to Notes</a></p>
   <h1>Tags</h1>
-  <ul class="note-list">
+  <ul class="note-list tag-list" id="noteList">
     {% for slug in site.data.tags.tag_slugs %}
       <li>
         <a class="note-title" href="{{ '/tags/' | append: slug | relative_url }}">#{{ slug }}</a>
