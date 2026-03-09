@@ -4,6 +4,7 @@
 # not allow custom Jekyll generators.
 # Usage: ruby scripts/generate_tag_pages.rb (run from repo root)
 
+require "date"
 require "fileutils"
 require "yaml"
 
