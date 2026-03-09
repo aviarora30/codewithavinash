@@ -11,8 +11,8 @@ tags:
   - learning
   - ai
   - craftsmanship
-  - thinking
-  - experience
+  - depth
+  - deliberate-practice
 ---
 
 I recently started learning n8n and agentic AI systems, and it made me realise

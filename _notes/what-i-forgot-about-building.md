@@ -11,9 +11,10 @@ image_alt: Headphones on a desk next to a laptop with code on screen
 #og_image: /assets/ogImages/what-i-forgot-about-building.jpg
 tags:
   - engineering-leadership
-  - career-evolution
-  - leadership-reflection
   - craft
+  - career-growth
+  - reflection
+  - building
 ---
 
 I recently participated in GeekCombat, a hackathon organised at To The New. I review code, get into technical discussions, and occasionally debug things with the team. So it's not like I've been completely away from the craft.

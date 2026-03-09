@@ -7,6 +7,8 @@ tags:
   - engineering-leadership
   - ownership
   - team-performance
+  - leadership
+  - teams
 ---
 
 When people talk about performance, they often jump straight to code.

@@ -11,10 +11,10 @@ image_alt: A small figure crossing a long bridge into soft morning light, symbol
 og_image: /assets/ogImages/learning-to-let-go-of-what-made-me-valuable.jpg
 tags:
   - engineering-leadership
-  - software-engineering
   - career-growth
   - mentorship
   - team-building
+  - delegation
 ---
 
 Early in my career, my value felt pretty straightforward. I needed to be the person who solves things fast. If something looked complicated, I'd take it. If a ticket was stuck, I'd jump in. If a PR needed "a small fix," I'd usually just make the change instead of going back and forth. It worked. Things moved. Seniors trusted me. I became the person who could be counted on when it mattered. And somewhere along the way, I started needing that to be true.
