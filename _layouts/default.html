@@ -4,11 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    {% assign meta_title = page.title | default: site.title %}
-    {% if page.collection == "notes" and page.title %}
-      {% assign meta_title = page.title | append: " | " | append: site.title %}
-    {% endif %}
-    {% assign
+    {% assign meta_title = page.title | default: site.title %} {% if
+    page.collection == "notes" and page.title %} {% assign meta_title =
+    page.title | append: " | " | append: site.title %} {% endif %} {% assign
     meta_description = page.description | default: page.summary %} {% assign
     meta_description = meta_description | default: site.description %} {% assign
     meta_url = page.url | absolute_url %} {% assign meta_type = page.og_type |
@@ -20,26 +18,17 @@
     <title>{{ meta_title }}</title>
     {% if meta_description %}
     <meta name="description" content="{{ meta_description }}" />
-    {% endif %}
-    {% if page.canonical %}
-      <link rel="canonical" href="{{ page.canonical }}" />
+    {% endif %} {% if page.canonical %}
+    <link rel="canonical" href="{{ page.canonical }}" />
     {% else %}
-      <link rel="canonical" href="{{ meta_url }}" />
-    {% endif %}
-
-    {% if meta_image %}
-      {% assign og_image_ext = meta_image | split: "." | last | downcase %}
-      {% assign og_image_type = "" %}
-      {% if og_image_ext == "png" %}
-        {% assign og_image_type = "image/png" %}
-      {% elsif og_image_ext == "jpg" or og_image_ext == "jpeg" %}
-        {% assign og_image_type = "image/jpeg" %}
-      {% elsif og_image_ext == "webp" %}
-        {% assign og_image_type = "image/webp" %}
-      {% elsif og_image_ext == "gif" %}
-        {% assign og_image_type = "image/gif" %}
-      {% endif %}
-    {% endif %}
+    <link rel="canonical" href="{{ meta_url }}" />
+    {% endif %} {% if meta_image %} {% assign og_image_ext = meta_image | split:
+    "." | last | downcase %} {% assign og_image_type = "" %} {% if og_image_ext
+    == "png" %} {% assign og_image_type = "image/png" %} {% elsif og_image_ext
+    == "jpg" or og_image_ext == "jpeg" %} {% assign og_image_type = "image/jpeg"
+    %} {% elsif og_image_ext == "webp" %} {% assign og_image_type = "image/webp"
+    %} {% elsif og_image_ext == "gif" %} {% assign og_image_type = "image/gif"
+    %} {% endif %} {% endif %}
 
     <meta property="og:title" content="{{ meta_title }}" />
     {% if meta_description %}
@@ -48,11 +37,10 @@
     <meta property="og:type" content="{{ meta_type }}" />
     <meta property="og:url" content="{{ meta_url }}" />
     {% if meta_image %}
-      <meta property="og:image" content="{{ meta_image | absolute_url }}" />
-      {% if og_image_type %}
-        <meta property="og:image:type" content="{{ og_image_type }}" />
-      {% endif %}
-    {% endif %}
+    <meta property="og:image" content="{{ meta_image | absolute_url }}" />
+    {% if og_image_type %}
+    <meta property="og:image:type" content="{{ og_image_type }}" />
+    {% endif %} {% endif %}
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ meta_title }}" />
@@ -75,17 +63,21 @@
       gtag("config", "G-8N7ZS3VK57");
     </script>
 
-    {% comment %}In development use source CSS so edits apply without running asset script; in production use hashed files from CI when available, else fall back to source.{% endcomment %}
-    {% if site.environment == "production" and site.data.asset_hashes %}
-      {% assign css_styles = site.data.asset_hashes.styles | default: "styles.css" %}
-      {% assign css_notes = site.data.asset_hashes.notes_css | default: "notes/notes.css" %}
-    {% else %}
-      {% assign css_styles = "styles.css" %}
-      {% assign css_notes = "notes/notes.css" %}
-    {% endif %}
+    {% comment %}In development use source CSS so edits apply without running
+    asset script; in production use hashed files from CI when available, else
+    fall back to source.{% endcomment %} {% if site.environment == "production"
+    and site.data.asset_hashes %} {% assign css_styles =
+    site.data.asset_hashes.styles | default: "styles.css" %} {% assign css_notes
+    = site.data.asset_hashes.notes_css | default: "notes/notes.css" %} {% else
+    %} {% assign css_styles = "styles.css" %} {% assign css_notes =
+    "notes/notes.css" %} {% endif %}
     <link rel="stylesheet" href="/{{ css_styles }}" />
-    {% assign show_notes_css = page.notes_styles or page.collection == "notes" or page.layout == "tag" or page.layout == "tags_index" %}
-    {% if show_notes_css or page.url contains "/tags/" %}
+    {% if page.notes_styles %} {% assign show_notes_css = true %} {% elsif
+    page.collection == 'notes' %} {% assign show_notes_css = true %} {% elsif
+    page.layout == 'tag' %} {% assign show_notes_css = true %} {% elsif
+    page.layout == 'tags_index' %} {% assign show_notes_css = true %} {% else %}
+    {% assign show_notes_css = false %} {% endif %} {% if show_notes_css or
+    page.url contains '/tags/' %}
     <link rel="stylesheet" href="/{{ css_notes }}" />
     {% endif %}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -103,7 +95,9 @@
             header.classList.remove("is-stuck");
           }
         }
-        window.addEventListener("scroll", updateStickyHeader, { passive: true });
+        window.addEventListener("scroll", updateStickyHeader, {
+          passive: true,
+        });
         updateStickyHeader();
       })();
     </script>
