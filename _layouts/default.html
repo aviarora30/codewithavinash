@@ -71,6 +71,35 @@
       }
     </script>
 
+    {% if page.collection == "notes" %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": {{ page.title | jsonify }},
+      "author": {
+        "@type": "Person",
+        "name": "Avinash Arora",
+        "url": "https://codewithavinash.com"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Avinash Arora",
+        "url": "https://codewithavinash.com"
+      },
+      "url": {{ page.url | absolute_url | jsonify }},
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }}
+      {% if page.summary or page.description %},
+      "description": {{ page.description | default: page.summary | jsonify }}
+      {% endif %}
+      {% if page.image %},
+      "image": {{ page.image | absolute_url | jsonify }}
+      {% endif %}
+    }
+    </script>
+    {% endif %}
+
     {% comment %}ga_page_type: pass to GA4 as custom dimension "page_type"
     (create in GA4 Admin → Custom definitions) to segment tag pages. Values:
     default | tag_page | tags_index.{% endcomment %} {% assign ga_page_type =
