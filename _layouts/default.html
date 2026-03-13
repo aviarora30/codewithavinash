@@ -50,10 +50,33 @@
     <meta name="twitter:image" content="{{ meta_image | absolute_url }}" />
     {% endif %}
 
-    {% comment %}ga_page_type: pass to GA4 as custom dimension "page_type" (create in GA4 Admin → Custom definitions) to segment tag pages. Values: default | tag_page | tags_index.{% endcomment %}
-    {% assign ga_page_type = "default" %}
-    {% if page.layout == 'tag' %}{% assign ga_page_type = "tag_page" %}{% endif %}
-    {% if page.layout == 'tags_index' %}{% assign ga_page_type = "tags_index" %}{% endif %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "Code With Avinash",
+            "url": "https://codewithavinash.com"
+          },
+          {
+            "@type": "Person",
+            "name": "Avinash Arora",
+            "jobTitle": "Senior Engineering Manager",
+            "description": "Engineering leader and technical architect with 17 years of experience building scalable web, mobile, and OTT platforms.",
+            "url": "https://codewithavinash.com",
+            "sameAs": ["https://www.linkedin.com/in/avinash-arora"]
+          }
+        ]
+      }
+    </script>
+
+    {% comment %}ga_page_type: pass to GA4 as custom dimension "page_type"
+    (create in GA4 Admin → Custom definitions) to segment tag pages. Values:
+    default | tag_page | tags_index.{% endcomment %} {% assign ga_page_type =
+    "default" %} {% if page.layout == 'tag' %}{% assign ga_page_type =
+    "tag_page" %}{% endif %} {% if page.layout == 'tags_index' %}{% assign
+    ga_page_type = "tags_index" %}{% endif %}
 
     <script
       async
@@ -65,7 +88,7 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", "G-8N7ZS3VK57", { "page_type": "{{ ga_page_type }}" });
+      gtag("config", "G-8N7ZS3VK57", { page_type: "{{ ga_page_type }}" });
     </script>
 
     {% comment %}In development use source CSS so edits apply without running
@@ -138,7 +161,10 @@
         function isTagPageUrl(href) {
           if (!href) return false;
           try {
-            var path = href.indexOf("/") === 0 ? href : new URL(href, window.location.origin).pathname;
+            var path =
+              href.indexOf("/") === 0
+                ? href
+                : new URL(href, window.location.origin).pathname;
             return /^\/tags\/[^/]+\/?$/.test(path);
           } catch (e) {
             return false;
