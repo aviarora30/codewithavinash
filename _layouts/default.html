@@ -20,6 +20,7 @@
     <meta name="description" content="{{ meta_description }}" />
     {% endif %}
     <meta name="author" content="Avinash Arora" />
+    <meta name="application-name" content="{{ site.title }}" />
     {% if page.canonical %}
     <link rel="canonical" href="{{ page.canonical }}" />
     {% else %}
@@ -38,6 +39,7 @@
     {% endif %}
     <meta property="og:type" content="{{ meta_type }}" />
     <meta property="og:url" content="{{ meta_url }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
     {% if meta_image %}
     <meta property="og:image" content="{{ meta_image | absolute_url }}" />
     {% if og_image_type %}
@@ -67,7 +69,10 @@
             "jobTitle": "Senior Engineering Manager",
             "description": "Engineering leader and technical architect with 17 years of experience building scalable web, mobile, and OTT platforms.",
             "url": "https://codewithavinash.com",
-            "sameAs": ["https://www.linkedin.com/in/avinash-arora"]
+            "sameAs": [
+              "https://www.linkedin.com/in/avinash-arora",
+              "https://github.com/aviarora30"
+            ]
           }
         ]
       }
@@ -75,39 +80,37 @@
 
     {% if page.collection == "notes" %}
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": {{ page.title | jsonify }},
-      "author": {
-        "@type": "Person",
-        "name": "Avinash Arora",
-        "url": "https://codewithavinash.com"
-      },
-      "publisher": {
-        "@type": "Person",
-        "name": "Avinash Arora",
-        "url": "https://codewithavinash.com"
-      },
-      "url": {{ page.url | absolute_url | jsonify }},
-      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
-      "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }}
-      {% if page.summary or page.description %},
-      "description": {{ page.description | default: page.summary | jsonify }}
-      {% endif %}
-      {% if page.image %},
-      "image": {{ page.image | absolute_url | jsonify }}
-      {% endif %}
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": {{ page.title | jsonify }},
+        "author": {
+          "@type": "Person",
+          "name": "Avinash Arora",
+          "url": "https://codewithavinash.com"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Avinash Arora",
+          "url": "https://codewithavinash.com"
+        },
+        "url": {{ page.url | absolute_url | jsonify }},
+        "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+        "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }}
+        {% if page.summary or page.description %},
+        "description": {{ page.description | default: page.summary | jsonify }}
+        {% endif %}
+        {% if page.image %},
+        "image": {{ page.image | absolute_url | jsonify }}
+        {% endif %}
+      }
     </script>
-    {% endif %}
-
-    {% comment %}ga_page_type: pass to GA4 as custom dimension "page_type"
-    (create in GA4 Admin → Custom definitions) to segment tag pages. Values:
-    default | tag_page | tags_index.{% endcomment %} {% assign ga_page_type =
-    "default" %} {% if page.layout == 'tag' %}{% assign ga_page_type =
-    "tag_page" %}{% endif %} {% if page.layout == 'tags_index' %}{% assign
-    ga_page_type = "tags_index" %}{% endif %}
+    {% endif %} {% comment %}ga_page_type: pass to GA4 as custom dimension
+    "page_type" (create in GA4 Admin → Custom definitions) to segment tag pages.
+    Values: default | tag_page | tags_index.{% endcomment %} {% assign
+    ga_page_type = "default" %} {% if page.layout == 'tag' %}{% assign
+    ga_page_type = "tag_page" %}{% endif %} {% if page.layout == 'tags_index'
+    %}{% assign ga_page_type = "tags_index" %}{% endif %}
 
     <script
       async
