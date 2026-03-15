@@ -153,6 +153,11 @@ section + section {
   max-width: 520px;
 }
 
+.intro-text h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
 .intro-text p:first-of-type {
   font-size: 1rem;
   font-weight: 500;
