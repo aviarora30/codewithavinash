@@ -6,6 +6,8 @@ index_summary: Why context, not just decisions, shapes ownership and trust in te
 is_published: false
 publish_at: 2026-03-22
 read_time: "6 min read"
+image: /assets/decision-making-in-teams-context-vs-command.jpg
+image_alt: Comparison of command-driven and collaborative team meetings, highlighting passive versus engaged participation.
 tags:
   - leadership
   - engineering-leadership
