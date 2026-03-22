@@ -3,7 +3,7 @@ title: "Decision Making in Teams: Context vs Command"
 date: 2026-03-20
 summary: A reflection on two styles of management, one that demands trust without context, and one that builds it by explaining decisions.
 index_summary: Why context, not just decisions, shapes ownership and trust in teams.
-is_published: false
+is_published: true
 publish_at: 2026-03-22
 read_time: "6 min read"
 image: /assets/decision-making-in-teams-context-vs-command.jpg
