@@ -7,6 +7,8 @@ A personal website showcasing the work and insights of Avinash Arora, an enginee
 ```
 .
 ├── .github/workflows/    # deploy-pages.yml, scheduled-publish.yml
+├── Gemfile               # Local Jekyll deps (run `bundle install` in repo root)
+├── Gemfile.lock          # Locked gem versions
 ├── CNAME                 # Domain configuration for GitHub Pages
 ├── _config.yml           # Jekyll configuration
 ├── _includes/            # Shared header/footer
@@ -43,17 +45,21 @@ This site uses Jekyll layouts and a `notes` collection. CSS files are built with
 
 **Local preview:**
 
+Run these commands from the **repository root** (the folder that contains `Gemfile` and `_config.yml`).
+
 1. (Optional) Generate hashed CSS and asset data for production-like assets:
    - `ruby scripts/asset_hashes.rb`
-2. Install Bundler (Ruby 2.6 users):
+2. Install Bundler (Ruby 2.6 only):
    - `gem install bundler -v 2.4.22`
-3. Run the site (tag pages are generated automatically by the plugin; no need to run `generate_tag_pages.rb`):
-   - `bundle _2.4.22_ exec jekyll serve`
-   - or with live reload: `bundle exec jekyll serve --livereload`
-4. Visit:
+3. Install gems (first time, or after `Gemfile` changes):
+   - `bundle install`
+4. Run the site (tag pages are generated automatically by the plugin; no need to run `generate_tag_pages.rb`):
+   - Ruby 2.6: `bundle _2.4.22_ exec jekyll serve`, or with live reload: `bundle _2.4.22_ exec jekyll serve --livereload`
+   - Ruby 3.2+ (latest Bundler): `bundle exec jekyll serve` or `bundle exec jekyll serve --livereload`
+5. Visit:
    - `http://localhost:4000`
 
-If you’re on Ruby 3.2+, you can use the latest Bundler and run `bundle exec jekyll serve` or `bundle exec jekyll serve --livereload`.
+If `bundle install` fails with **permission errors** writing under `/opt/homebrew/...` (common with Homebrew Ruby), this repo sets `BUNDLE_PATH` to `vendor/bundle` via `.bundle/config`, so gems install inside the project and do not need system paths. Run `bundle install` again from the repo root; `vendor/bundle/` is gitignored.
 
 **Production (GitHub Pages):** The workflow `.github/workflows/deploy-pages.yml` runs after **Scheduled publish notes** completes (or on manual dispatch). It runs `ruby scripts/asset_hashes.rb` and `ruby scripts/generate_tag_pages.rb` before the Jekyll build (GitHub Pages does not run custom plugins). Enable in the repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**. Locally, the tag plugin generates tag pages when you run `jekyll serve`; if you skip the asset script, the layout falls back to `styles.css` and `notes/notes.css`.
 
