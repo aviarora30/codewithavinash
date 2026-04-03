@@ -1,0 +1,3 @@
+# Merged only for local preview (see README). GitHub Pages builds use _config.yml alone.
+# Without this, notes with a `date` in the future are omitted (Jekyll’s default future: false).
+future: true
