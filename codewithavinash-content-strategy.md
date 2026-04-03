@@ -97,14 +97,15 @@ This file is listed under `exclude` in `_config.yml`, so Jekyll does not copy it
 
 ## Themes Across All Notes
 
-| Theme                                | Notes it appears in |
-| ------------------------------------ | ------------------- |
-| Ownership & accountability           | #1, #3, #5          |
-| Identity shift as you grow           | #3, #4              |
-| What looks like leadership but isn't | #1, #3, #5          |
-| Depth vs. efficiency trade-off       | #2, #4              |
-| Trust — earned vs. assumed           | #5                  |
-| AI and craftsmanship                 | #2                  |
+| Theme                                                 | Notes it appears in |
+| ----------------------------------------------------- | ------------------- |
+| Ownership & accountability                            | #1, #3, #5          |
+| Identity shift as you grow                            | #3, #4              |
+| What looks like leadership but isn't                  | #1, #3, #5          |
+| Depth vs. efficiency trade-off                        | #2, #4              |
+| Trust — earned vs. assumed                            | #5                  |
+| AI and craftsmanship                                  | #2                  |
+| Translational failure — right problem, wrong language | #6                  |
 
 ---
 
