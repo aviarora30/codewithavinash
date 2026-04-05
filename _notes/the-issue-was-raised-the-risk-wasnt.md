@@ -3,7 +3,7 @@ title: "The Issue Was Raised. The Risk Wasn't."
 date: 2026-04-03
 summary: Technical leads often raise the problem but never make the risk legible to the people who need to act on it. That gap is where projects get hurt.
 index_summary: Why raising the issue and communicating the risk are two different things.
-is_published: false
+is_published: true
 publish_at: 2026-04-05 09:00:00
 read_time: "7 min read"
 image: /assets/issue-was-raised-risk-wasnt.jpg
