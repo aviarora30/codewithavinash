@@ -52,13 +52,3 @@ Content here.
 ## Another section
 
 More content. You can use **bold**, _italic_, [links](url), and normal Markdown.
-
-<div class="note-takeaway" markdown="1">
-
-## Takeaways / Advice
-
-- **Key point one.** Short explanation.
-- **Key point two.** Short explanation.
-- **Key point three.** Short explanation.
-
-</div>
