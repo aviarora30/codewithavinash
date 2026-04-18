@@ -3,7 +3,7 @@ title: "Avoidance, Disguised as Kindness"
 date: 2026-04-17
 summary: When trying to be fair delays the decisions that need to be made.
 index_summary: When fairness turns into avoidance and decisions get delayed.
-is_published: false
+is_published: true
 publish_at: 2026-04-18
 image: /assets/avoidance-disguised-as-kindness.jpg
 image_alt: A team working together in a modern office while one person sits slightly disengaged, creating a subtle sense of imbalance.
