@@ -5,6 +5,8 @@ summary: Credibility lives in whether the room is still willing to be influenced
 index_summary: When influence shifts in the room, knowledge alone does not hold credibility.
 is_published: true
 read_time: "5 min read"
+image: /assets/credibility-isnt-stored.jpg
+image_alt: A lone chair pulled back from a long wooden table in a dimly lit room, with soft light falling across the surface and one end left in shadow.
 tags:
   - leadership-reflection
   - engineering-leadership
@@ -15,8 +17,6 @@ tags:
 There was a meeting in my first few weeks where someone said something technically correct, and the room moved on anyway. I remember noticing it and not knowing what to make of it yet.
 
 I was new to the company and the project, and everything was unfamiliar, the system, the tech stack, the domain, and the people. Most of my time in those early days went into understanding what I had walked into. I was listening more than speaking, trying to figure out how things worked, who people turned to, and how decisions actually got made.
-
-That moment stayed with me because it wasn’t an isolated one.
 
 There was someone in the room who clearly knew the system well. He had been there through the difficult months, understood the codebase, the history, and why things had ended up the way they had. But the room was no longer oriented toward him.
 
@@ -52,9 +52,7 @@ Looking at it now, it feels different. He had read the room, seen that it was no
 
 He knew. And he laid down his weapons.
 
-And in doing that, he didn’t just step back from the conversation. He removed the last bit of resistance that might have forced the room to reconsider, and in doing so, confirmed what the room had already started to do, stop believing in him. Whatever doubt was left didn’t have to be resolved anymore. The moment he stopped trying to influence the outcome, it could just move on.
-
-I think about that phase more often now than I did back then.
+And in doing that, he didn't just step back from the conversation. He removed the last bit of resistance that might have forced the room to reconsider. He confirmed what the room had already started to do. Stop believing in him. Whatever doubt was left didn't have to be resolved anymore. The moment he stopped trying to influence the outcome, it could just move on.
 
 At the time, I was focused on finding my footing. I was getting heard, my inputs were landing, and I was slowly becoming part of how decisions were being made. I didn’t question it too much. It felt like things were falling into place.
 
