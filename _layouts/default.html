@@ -110,10 +110,9 @@
     Values: default | tag_page | tags_index.{% endcomment %} {% assign
     ga_page_type = "default" %} {% if page.layout == 'tag' %}{% assign
     ga_page_type = "tag_page" %}{% endif %} {% if page.layout == 'tags_index'
-    %}{% assign ga_page_type = "tags_index" %}{% endif %}
-
-    {% comment %}Only load GA on production builds (JEKYLL_ENV=production). Local
-    `jekyll serve` / default `jekyll build` use development and skip GA entirely.{% endcomment %}
+    %}{% assign ga_page_type = "tags_index" %}{% endif %} {% comment %}Only load
+    GA on production builds (JEKYLL_ENV=production). Local `jekyll serve` /
+    default `jekyll build` use development and skip GA entirely.{% endcomment %}
     {% if jekyll.environment == "production" %}
     <script
       async
@@ -127,16 +126,14 @@
       gtag("js", new Date());
       gtag("config", "G-8N7ZS3VK57", { page_type: "{{ ga_page_type }}" });
     </script>
-    {% endif %}
-
-    {% comment %}In development use source CSS so edits apply without running
-    asset script; in production use hashed files from CI when available, else
-    fall back to source.{% endcomment %} {% if jekyll.environment == "production"
-    and site.data.asset_hashes %} {% assign css_styles =
-    site.data.asset_hashes.styles | default: "styles.css" %} {% assign css_notes
-    = site.data.asset_hashes.notes_css | default: "notes/notes.css" %} {% else
-    %} {% assign css_styles = "styles.css" %} {% assign css_notes =
-    "notes/notes.css" %} {% endif %}
+    {% endif %} {% comment %}In development use source CSS so edits apply
+    without running asset script; in production use hashed files from CI when
+    available, else fall back to source.{% endcomment %} {% if
+    jekyll.environment == "production" and site.data.asset_hashes %} {% assign
+    css_styles = site.data.asset_hashes.styles | default: "styles.css" %} {%
+    assign css_notes = site.data.asset_hashes.notes_css | default:
+    "notes/notes.css" %} {% else %} {% assign css_styles = "styles.css" %} {%
+    assign css_notes = "notes/notes.css" %} {% endif %}
     <link rel="stylesheet" href="/{{ css_styles }}" />
     {% if page.notes_styles %} {% assign show_notes_css = true %} {% elsif
     page.collection == 'notes' %} {% assign show_notes_css = true %} {% elsif
@@ -146,7 +143,12 @@
     page.url contains '/tags/' %}
     <link rel="stylesheet" href="/{{ css_notes }}" />
     {% endif %}
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
     {% include header.html %} {{ content }} {% include footer.html %}
