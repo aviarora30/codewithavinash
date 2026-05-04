@@ -111,14 +111,14 @@
     ga_page_type = "default" %} {% if page.layout == 'tag' %}{% assign
     ga_page_type = "tag_page" %}{% endif %} {% if page.layout == 'tags_index'
     %}{% assign ga_page_type = "tags_index" %}{% endif %}     {% comment %}Only load GA on production builds (JEKYLL_ENV=production). Skip
-    entirely on local Jekyll. On prod, omit GA when localStorage cw_ga_optout is
-    "1" (set in devtools on codewithavinash.com: localStorage.setItem("cw_ga_optout","1");
+    entirely on local Jekyll. On prod, omit GA when localStorage cwa_ga_optout is
+    "1" (set in devtools on codewithavinash.com: localStorage.setItem("cwa_ga_optout","1");
     removeItem to opt back in).{% endcomment %}
     {% if jekyll.environment == "production" %}
     <script>
       (function () {
         try {
-          if (window.localStorage.getItem("cw_ga_optout") === "1") {
+          if (window.localStorage.getItem("cwa_ga_optout") === "1") {
             return;
           }
         } catch (e) {}
