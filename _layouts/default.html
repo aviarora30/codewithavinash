@@ -112,6 +112,9 @@
     ga_page_type = "tag_page" %}{% endif %} {% if page.layout == 'tags_index'
     %}{% assign ga_page_type = "tags_index" %}{% endif %}
 
+    {% comment %}Only load GA on production builds (JEKYLL_ENV=production). Local
+    `jekyll serve` / default `jekyll build` use development and skip GA entirely.{% endcomment %}
+    {% if jekyll.environment == "production" %}
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-8N7ZS3VK57"
@@ -124,10 +127,11 @@
       gtag("js", new Date());
       gtag("config", "G-8N7ZS3VK57", { page_type: "{{ ga_page_type }}" });
     </script>
+    {% endif %}
 
     {% comment %}In development use source CSS so edits apply without running
     asset script; in production use hashed files from CI when available, else
-    fall back to source.{% endcomment %} {% if site.environment == "production"
+    fall back to source.{% endcomment %} {% if jekyll.environment == "production"
     and site.data.asset_hashes %} {% assign css_styles =
     site.data.asset_hashes.styles | default: "styles.css" %} {% assign css_notes
     = site.data.asset_hashes.notes_css | default: "notes/notes.css" %} {% else
