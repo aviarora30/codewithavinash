@@ -110,21 +110,30 @@
     Values: default | tag_page | tags_index.{% endcomment %} {% assign
     ga_page_type = "default" %} {% if page.layout == 'tag' %}{% assign
     ga_page_type = "tag_page" %}{% endif %} {% if page.layout == 'tags_index'
-    %}{% assign ga_page_type = "tags_index" %}{% endif %} {% comment %}Only load
-    GA on production builds (JEKYLL_ENV=production). Local `jekyll serve` /
-    default `jekyll build` use development and skip GA entirely.{% endcomment %}
+    %}{% assign ga_page_type = "tags_index" %}{% endif %}     {% comment %}Only load GA on production builds (JEKYLL_ENV=production). Skip
+    entirely on local Jekyll. On prod, omit GA when localStorage cw_ga_optout is
+    "1" (set in devtools on codewithavinash.com: localStorage.setItem("cw_ga_optout","1");
+    removeItem to opt back in).{% endcomment %}
     {% if jekyll.environment == "production" %}
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-8N7ZS3VK57"
-    ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-8N7ZS3VK57", { page_type: "{{ ga_page_type }}" });
+      (function () {
+        try {
+          if (window.localStorage.getItem("cw_ga_optout") === "1") {
+            return;
+          }
+        } catch (e) {}
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        window.gtag = gtag;
+        gtag("js", new Date());
+        gtag("config", "G-8N7ZS3VK57", { page_type: "{{ ga_page_type }}" });
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-8N7ZS3VK57";
+        document.head.appendChild(s);
+      })();
     </script>
     {% endif %} {% comment %}In development use source CSS so edits apply
     without running asset script; in production use hashed files from CI when
