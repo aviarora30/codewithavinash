@@ -8,7 +8,7 @@ index_summary: When we promote people, we add accountability without checking if
 
 is_published: false
 
-publish_at: 2026-08-04 09:00:00
+publish_at: 2026-08-03 09:00:00
 
 read_time: "7 min read"
 
