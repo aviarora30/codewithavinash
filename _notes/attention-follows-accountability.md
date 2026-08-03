@@ -6,8 +6,7 @@ summary: How adding responsibility can sometimes reduce the attention needed to 
 
 index_summary: When we promote people, we add accountability without checking if we've removed anything else.
 
-is_published: false
-
+is_published: true
 publish_at: 2026-08-03 09:00:00
 
 read_time: "7 min read"
