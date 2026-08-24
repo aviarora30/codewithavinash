@@ -3,9 +3,15 @@ description: Personal website of Avinash Arora, engineering leader and frontend 
 url: https://codewithavinash.com
 image: /assets/avinash.png
 
-# Repo-only markdown (not copied to _site / not published). Add paths as needed.
+# Repo-only files (not copied to _site / not published).
 exclude:
   - codewithavinash-content-strategy.md
+  - scripts/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - README.md
+  - .bundle/
 
 collections:
   notes:
